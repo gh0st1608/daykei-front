@@ -9,7 +9,7 @@ export default function Layout() {
         <div className="basis-2/9 my-1 p-3">
           <Sidebar />
         </div>
-        <div className="basis-7/9 p-3">
+        <div className="basis-7/9 p-3 flex flex-col">
           <Navbar />
           <Content />
         </div>

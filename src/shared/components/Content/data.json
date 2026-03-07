@@ -1,0 +1,23 @@
+[
+  {
+    "id": "#123456",
+    "date": "2024-06-01",
+    "name": "John Doe",
+    "amount": 12345,
+    "status": "Completado"
+  },
+  {
+    "id": "#123457",
+    "date": "2024-06-02",
+    "name": "Keisi",
+    "amount": 12346,
+    "status": "Pendiente"
+  },
+  {
+    "id": "#123458",
+    "date": "2024-06-03",
+    "name": "Dyron",
+    "amount": 12347,
+    "status": "Cancelado"
+  }
+]
