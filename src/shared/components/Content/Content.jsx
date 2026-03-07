@@ -3,6 +3,7 @@ import {
   flexRender,
   getCoreRowModel,
   useReactTable,
+  getPaginationRowModel,
 } from "@tanstack/react-table";
 import dataJson from "./data.json";
 import React from "react";
@@ -52,18 +53,53 @@ const columns = [
   }),
 ];
 
+function getVisiblePages(currentPage, totalPages, visibleCount = 4) {
+  let start = Math.max(0, currentPage - 1);
+  let end = start + visibleCount;
+
+  if (end > totalPages) {
+    end = totalPages;
+    start = Math.max(0, end - visibleCount);
+  }
+
+  const pages = [];
+
+  for (let i = start; i < end; i++) {
+    pages.push(i);
+  }
+
+  return pages;
+}
+
 export default function Content() {
   const [data] = React.useState(() => [...dataJson]);
+
+  const [pagination, setPagination] = React.useState({
+    pageIndex: 0,
+    pageSize: 5,
+  });
 
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    onPaginationChange: setPagination,
+    state: {
+      pagination,
+    },
   });
+
+  const pageIndex = table.getState().pagination.pageIndex;
+  const pageSize = table.getState().pagination.pageSize;
+  const totalRows = data.length;
+  const totalPages = table.getPageCount();
+
+  const visiblePages = getVisiblePages(pageIndex, totalPages);
 
   return (
     <>
-      <div className="flex flex-1 flex-col gap-2 p-4 h-max">
+      <div className="flex flex-1 flex-col gap-2 p-4 h-max overflow-x-auto">
         <section className="shadow-xl rounded-xl flex flex-col py-5 bg-[#feffff] font-inter">
           <div className="flex justify-between px-7 py-6">
             <div className="flex flex-col gap-4">
@@ -138,7 +174,7 @@ export default function Content() {
             </div>
           </div>
         </section>
-        <section className="flex items-center h-full w-full font-inter">
+        <section className="flex flex-col items-center h-full w-full font-inter">
           <div className="bg-white shadow-md rounded-3xl w-full p-2">
             <table className="min-w-full divide-y divide-gray-200">
               <thead>
@@ -172,6 +208,52 @@ export default function Content() {
                 ))}
               </tbody>
             </table>
+          </div>
+          <div className="flex justify-between w-full pt-6 text-sm">
+            <div className="flex self-center">
+              <span className="pr-2">Mostrando</span>
+              <select
+                value={pageSize}
+                onChange={(e) => table.setPageSize(Number(e.target.value))}
+                className="border rounded text-bold"
+              >
+                <option value={5}>5</option>
+                <option value={10}>10</option>
+                <option value={15}>15</option>
+              </select>
+              <span className="pl-2">
+                de <strong>{totalRows}</strong> resultados
+              </span>
+            </div>
+            <div className="flex items-center gap-1 p-2 bg-[#efefef] rounded-xl">
+              <button
+                onClick={() => table.setPageIndex(0)}
+                disabled={!table.getCanPreviousPage()}
+                className="px-2 py-1 rounded"
+              >
+                {"<<"}
+              </button>
+
+              {visiblePages.map((page) => (
+                <button
+                  key={page}
+                  onClick={() => table.setPageIndex(page)}
+                  className={`px-5 py-3 rounded-2xl font-bold 
+          ${page === pageIndex ? "bg-white text-green-900 shadow-xl" : "bg-transparent text-[#59cec7]"}
+        `}
+                >
+                  {page + 1}
+                </button>
+              ))}
+
+              <button
+                onClick={() => table.setPageIndex(totalPages - 1)}
+                disabled={!table.getCanNextPage()}
+                className="px-2 py-1 rounded"
+              >
+                {">>"}
+              </button>
+            </div>
           </div>
         </section>
       </div>

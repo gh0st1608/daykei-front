@@ -19,5 +19,187 @@
     "name": "Dyron",
     "amount": 12347,
     "status": "Cancelado"
+  },
+  {
+    "id": "#123459",
+    "date": "2024-02-18",
+    "name": "Lucas",
+    "amount": 8450,
+    "status": "Pendiente"
+  },
+  {
+    "id": "#123460",
+    "date": "2025-07-09",
+    "name": "Valeria",
+    "amount": 15230,
+    "status": "Completado"
+  },
+  {
+    "id": "#123461",
+    "date": "2024-11-23",
+    "name": "Mateo",
+    "amount": 9342,
+    "status": "Cancelado"
+  },
+  {
+    "id": "#123462",
+    "date": "2025-03-14",
+    "name": "Camila",
+    "amount": 27890,
+    "status": "Pendiente"
+  },
+  {
+    "id": "#123463",
+    "date": "2024-08-30",
+    "name": "Santiago",
+    "amount": 6431,
+    "status": "Completado"
+  },
+  {
+    "id": "#123464",
+    "date": "2025-01-05",
+    "name": "Renata",
+    "amount": 18765,
+    "status": "Cancelado"
+  },
+  {
+    "id": "#123465",
+    "date": "2024-05-12",
+    "name": "Diego",
+    "amount": 4921,
+    "status": "Pendiente"
+  },
+  {
+    "id": "#123466",
+    "date": "2025-10-21",
+    "name": "Daniela",
+    "amount": 31540,
+    "status": "Completado"
+  },
+  {
+    "id": "#123467",
+    "date": "2024-03-21",
+    "name": "Gabriel",
+    "amount": 7284,
+    "status": "Pendiente"
+  },
+  {
+    "id": "#123468",
+    "date": "2025-06-15",
+    "name": "Mariana",
+    "amount": 19432,
+    "status": "Completado"
+  },
+  {
+    "id": "#123469",
+    "date": "2024-12-02",
+    "name": "Andrés",
+    "amount": 3567,
+    "status": "Cancelado"
+  },
+  {
+    "id": "#123470",
+    "date": "2025-02-11",
+    "name": "Lucía",
+    "amount": 28450,
+    "status": "Pendiente"
+  },
+  {
+    "id": "#123471",
+    "date": "2024-07-27",
+    "name": "Fernando",
+    "amount": 12990,
+    "status": "Completado"
+  },
+  {
+    "id": "#123472",
+    "date": "2025-09-04",
+    "name": "Paula",
+    "amount": 6743,
+    "status": "Cancelado"
+  },
+  {
+    "id": "#123473",
+    "date": "2024-10-19",
+    "name": "Ricardo",
+    "amount": 22135,
+    "status": "Pendiente"
+  },
+  {
+    "id": "#123474",
+    "date": "2025-04-30",
+    "name": "Elena",
+    "amount": 9087,
+    "status": "Completado"
+  },
+  {
+    "id": "#123475",
+    "date": "2024-01-14",
+    "name": "Hugo",
+    "amount": 5476,
+    "status": "Cancelado"
+  },
+  {
+    "id": "#123476",
+    "date": "2025-11-08",
+    "name": "Natalia",
+    "amount": 16780,
+    "status": "Pendiente"
+  },
+  {
+    "id": "#123477",
+    "date": "2024-04-09",
+    "name": "Sebastián",
+    "amount": 7420,
+    "status": "Pendiente"
+  },
+  {
+    "id": "#123478",
+    "date": "2025-08-13",
+    "name": "Isabella",
+    "amount": 21980,
+    "status": "Completado"
+  },
+  {
+    "id": "#123479",
+    "date": "2024-09-17",
+    "name": "Tomás",
+    "amount": 5834,
+    "status": "Cancelado"
+  },
+  {
+    "id": "#123480",
+    "date": "2025-05-22",
+    "name": "Martina",
+    "amount": 16750,
+    "status": "Pendiente"
+  },
+  {
+    "id": "#123481",
+    "date": "2024-06-29",
+    "name": "Emilio",
+    "amount": 9032,
+    "status": "Completado"
+  },
+  {
+    "id": "#123482",
+    "date": "2025-02-03",
+    "name": "Antonia",
+    "amount": 12465,
+    "status": "Cancelado"
+  },
+  {
+    "id": "#123483",
+    "date": "2024-10-11",
+    "name": "Bruno",
+    "amount": 29870,
+    "status": "Pendiente"
+  },
+  {
+    "id": "#123484",
+    "date": "2025-12-01",
+    "name": "Valentina",
+    "amount": 4512,
+    "status": "Completado"
   }
 ]
